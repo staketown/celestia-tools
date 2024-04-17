@@ -16,14 +16,16 @@ route:
   # alerts as-is. This is unlikely to be what you want, unless you have
   # a very low alert volume or your upstream notification system performs
   # its own grouping. Example: group_by: [...]
-  receiver: 'PagerDuty'
+  receiver: 'discord'
   group_by: [...]
   repeat_interval: 4h
 
   routes:
-  - receiver: "PagerDuty"
+  - receiver: "discord"
 
 receivers:
-- name: 'PagerDuty'
-  pagerduty_configs:
-  - service_key: 'PD_SERVICE_KEY'
+- name: 'discord'
+  discord_configs:
+    - webhook_url: 'DISCORD_WEB_HOOK'
+      title: '{{ template "discord.title" . }}'
+      message: '{{ template "discord.message" . }}'

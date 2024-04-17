@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #### Fill up all the variable below
-PD_INTEGRATION_KEY="<ur_pd_integration_key>"
+DISCORD_WEB_HOOK="<your_discord_webhook>"
 ADMIN_USER="admin" #change if you want
 ADMIN_PASSWORD="useyourownpassword"
 
