@@ -32,6 +32,6 @@ GF_USERS_ALLOW_SIGN_UP=false \
 PROMETHEUS_CONFIG="./data/prometheus.yml" \
 GRAFANA_CONFIG="./data/grafana.ini" \
 OTEL_PROMETHEUS_EXPORTER=${OTEL_PROMETHEUS_EXPORTER} \
-docker-compose up -d --remove-orphans --build "$@"
+docker compose up -d --remove-orphans --build "$@"
 
 sudo chown -R $USER:$USER data
