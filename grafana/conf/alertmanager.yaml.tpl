@@ -26,6 +26,6 @@ route:
 receivers:
 - name: 'discord'
   discord_configs:
-    - webhook_url: 'DISCORD_WEB_HOOK'
+    - webhook_url: DISCORD_WEB_HOOK
       title: '{{ template "discord.title" . }}'
       message: '{{ template "discord.message" . }}'
