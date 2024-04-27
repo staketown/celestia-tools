@@ -18,7 +18,7 @@ alerting:
 scrape_configs:
   - job_name: celestia-appd
     static_configs:
-      - targets: ['PUBLIC_IP:26660', 'process-exporter:9256']
+      - targets: ['PUBLIC_IP:26660']
 
   - job_name: prometheus
     static_configs:
