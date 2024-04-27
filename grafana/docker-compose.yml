@@ -25,6 +25,7 @@ services:
     image: prom/alertmanager:v0.26.0
     container_name: alertmanager
     volumes:
+      - ./conf/discord_custom.tmpl:/etc/alertmanager/templates/discord_custom.tmpl:ro
       - ./conf/alertmanager.yaml:/etc/alertmanager/alertmanager.yaml:ro
       - ${XDG_DATA_HOME:-./data}/alertmanager:/data
     command:

@@ -5,6 +5,10 @@ global:
   smtp_smarthost: 'smtp.example.com:8825'
   smtp_from: 'no-reply@example.com'
   smtp_require_tls: false
+
+templates:
+  - '/etc/alertmanager/templates/discord_custom.tmpl'
+
 # The root route on which each incoming alert enters.
 route:
   # The labels by which incoming alerts are grouped together. For example,
