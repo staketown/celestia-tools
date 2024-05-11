@@ -74,6 +74,7 @@ services:
       - '--path.rootfs=/host'
       - '--collector.systemd'
     pid: host
+    network_mode: host
     volumes:
       - '/:/host:ro,rslave'
     expose:
